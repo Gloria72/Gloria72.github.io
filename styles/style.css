@@ -1,4 +1,4 @@
-
+                                                                                                  
 /* notes: spend some time making comments on how Flexbox and Grid are working here and
 personalize this portfolio page using google fonts, different colors, different hover and active styling, maybe a different layout or viewport response*/
 *{
@@ -6,21 +6,39 @@ personalize this portfolio page using google fonts, different colors, different 
     margin: 0 auto;
 }
 body{
-    background-color: white;
+    background-color: #e9e3e6;
 }
-
-header, footer {
+@font-face {
+    font-family: alex;
+    src: url(../font/AlexBrush-Regular.ttf);
+  }
+ @font-face {
+    font-family: reey;
+    src: url(../font/Reey-Regular.otf);
+  }
+header {
     display: flex;
     justify-content: center;
     width: 100%;
     align-items: center;
-    border: 1px solid black;
-    /* background-color: rgb(82, 99, 69);  play with a color scheme! */
+    border: 1px solid #9A8F97;
+    font-family: reey;
+    background-image:linear-gradient(to bottom,#c3baba,#e9e3e6);  
+    color: #736f72
 }
-
+footer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+    border: 1px solid #9A8F97;
+    font-family: reey;
+    background-image:linear-gradient(to top,#c3baba,#e9e3e6);  
+    color: #736f72
+}
 main {
-    font-family: 'Times New Roman', Times, serif; /* try using a google font instead*/
-    border: 1px, solid, black;
+    font-family:alex; 
+    border: 1px, solid, #9A8F97;
 }
 
 nav {
@@ -41,17 +59,18 @@ nav {
  }
 
 #nav-links li{
-    padding: 1em; /* what does em mean?*/
+    padding: 1em; /* what does em mean? The em is simply the font size. In an element with a 2in font, 1em thus means 2in.*/
 }
 
 #projects-grid{
     display: grid;
     max-width: 960px;
-    grid-template-columns: 1fr 1fr 1fr; /* what does fr mean?*/
+    grid-template-columns: 1fr 1fr 1fr; /* what does fr mean? A new unit of length called fr, which is short for “fraction”*/
     grid-template-rows: auto;
     grid-column-gap: 10px;
     grid-row-gap: 15px; 
-    /* background: rgba(102, 119, 59, 0.5);  play with color*/
+    background: #e9e3e6; 
+    color:#736f72
     
 }
 
@@ -60,6 +79,8 @@ nav {
     text-align: center;
     max-width: 100%;
     padding: 40px 0px;
+    font-family:alex;
+    font-size: 100px;
 }
 
 .project_item {
@@ -74,6 +95,10 @@ nav {
     align-items: center;
     background: rgba(232, 232, 231, 0.5); /*  play with color*/
 }
+a:hover {
+    box-shadow: inset 300px 0 0 0 #B2B2B2;
+    color:#736f72;
+  }
 
 .project_image { 
     grid-area: image; 
@@ -83,6 +108,7 @@ nav {
 }
 .project_title { 
     grid-area: title; 
+    font-family:alex;
 }
 .project-description { 
     grid-area: description; 
@@ -109,6 +135,7 @@ nav {
     
     #page_title{
         grid-column: 1/3;
+        font-family:alex;
     }
 }
 
@@ -119,5 +146,6 @@ nav {
     
     #page_title{
         grid-column: 1/2;
+        font-family:alex;
     }
 }
