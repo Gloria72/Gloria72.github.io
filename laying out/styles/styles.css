@@ -1,0 +1,161 @@
+html {
+    box-sizing: border-box;
+  }
+*{
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+body{
+    background-color: #e9e3e6;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+}
+@font-face {
+    font-family: alex;
+    src: url(../font/AlexBrush-Regular.ttf);
+  }
+ @font-face {
+    font-family: reey;
+    src: url(../font/Reey-Regular.otf);
+  }
+header {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+    border: 1px solid #9A8F97;
+    font-family: reey;
+    background-image:linear-gradient(to bottom,#c3baba,#e9e3e6);  
+    color: #736f72;
+    text-align: center;
+
+}
+footer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+    border: 1px solid #9A8F97;
+    font-family: reey;
+    background-image:linear-gradient(to top,#c3baba,#e9e3e6);  
+    color: #736f72
+}
+main {
+    font-family:alex; 
+    border: 1px, solid, #9A8F97;
+}
+
+nav {
+    width: 960px;
+    height: 100px;
+}
+
+#nav-links {
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px;
+}
+
+#home {
+    flex: auto;
+    padding: 20px;
+ }
+
+#nav-links li{
+    padding: 1em; /* what does em mean? The em is simply the font size. In an element with a 2in font, 1em thus means 2in.*/
+}
+
+
+.header {
+    background: #F7FFF7;
+}
+
+
+.Navigation {
+    background: #A1C6D7;
+  }
+.Content{
+    background-color:#DCD6F7 ;
+}
+.Footer{
+    background-color: #8f91a2;
+}
+.content-wrap {
+    max-width: 800px;
+    width: 85%;
+    margin: 0 auto;
+    padding: 60px 0;
+  }
+.divider > section {
+    border-bottom: 1px dashed #343434;
+    padding: 25px 0;
+  }
+.divider > section:last-of-type {
+    border-bottom: none;
+  }
+a:hover {
+    box-shadow: inset 300px 0 0 0 #B2B2B2;
+    color:#736f72;
+  
+  }
+h1 {
+    font-size: 100px;
+    line-height: 1;
+  }
+h2 {
+    font-size: 45px;
+  }
+h1, h2 {
+    font-family: 'Caveat', cursive;
+    font-weight: 400;
+    margin: 0;
+  }
+
+
+#footer-items{
+    display: flex;
+    box-sizing: border-box;
+    list-style-type: none;
+    width: 960px;
+    height: 50px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border-top: 1px solid black; /* again, play with this styling*/
+    margin-top: 2rem;
+
+}
+
+@media only screen and (min-width: 601px) and (max-width: 850px){ /* what is going on here?*/
+    h1 {
+        font-size: 75px;
+        line-height: 0.9;
+        margin-bottom: 20px;
+      }
+      h2 {
+        line-height: 1;
+      }
+      .contact-list a {
+        padding: 5px;
+      }
+    
+    #page_title{
+        grid-column: 1/3;
+        font-family:alex;
+    }
+}
+
+@media only screen and (max-width: 600px){
+    #projects-grid{
+    grid-template-columns: 1fr;
+    }
+    
+    #page_title{
+        grid-column: 1/2;
+        font-family:alex;
+    }
+}
