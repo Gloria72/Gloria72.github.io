@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" lang = "en" dir="ltr">
+        <meta name="author" content ="Gloria Cheng">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Orange Clock</title>
+        <link href="styles/style1.css" type="text/css" rel="stylesheet"> 
+    </head>
+    <h1>Orange Clock</h1>
+    
+    <body>
+        <div class="clock" id="clock">
+            <div class="hand hour-hand"></div>
+            <div class="hand minute-hand"></div>
+            <div class="hand second-hand"></div>
+            <ul>
+              <li><span>&bull;</span></li>
+              <li><span>&bull;</span></li>
+              <li><span>&bull;</span></li>
+              <li><span>&bull;</span></li>
+              <li><span>&bull;</span></li>
+              <li><span>&bull;</span></li>
+              <li><span>&bull;</span></li>
+              <li><span>&bull;</span></li>
+              <li><span>&bull;</span></li>
+              <li><span>&bull;</span></li>
+              <li><span>&bull;</span></li>
+              <li><span>&bull;</span></li>
+            </ul>
+          </div>
+
+        <br></br>
+        <h2 id="time"></h2>
+        <h3 id="plan"></h3>
+        
+        <img onclick="displayDate()"  src="images/260x260.png" alt="orange" height=80 width= 80 />
+        <img onclink="displayPlan()"   src="images/1.png" alt="orange" id="orange"/></a>
+    
+        <script type="text/javascript">
+            function displayDate(){
+	        document.getElementById("time").innerHTML=Date();
+            
+            }
+            const clock = document.getElementById("clock");
+            
+            
+            
+            
+            
+            function setDate() {
+               
+            const now = new Date();
+ 
+     
+            const secondsAngle = now.getSeconds() * 6;
+         
+            const minsAngle = now.getMinutes() * 6 + secondsAngle / 60;
+            
+            const hourAngle = ((now.getHours() % 12) / 12) * 360  + minsAngle / 12;
+           
+            clock.style.setProperty("--second-hand-degrees", secondsAngle + "deg");
+
+            clock.style.setProperty("--minute-hand-degrees", minsAngle + "deg");
+
+            clock.style.setProperty("--hour-hand-degrees", hourAngle + "deg");
+
+           
+            let startPosition = minsAngle;
+            let endPosition = hourAngle - minsAngle;
+
+           
+            if (minsAngle > hourAngle) {
+            startPosition = minsAngle - 360;
+            endPosition = hourAngle - startPosition;
+            }
+
+          
+            clock.style.setProperty("--start", startPosition + "deg");
+
+            clock.style.setProperty("--end", endPosition + "deg");
+        }
+
+        
+        setInterval(setDate, 1000);
+
+        setDate();
+
+
+
+        function displayPlan(){
+            var x=new Date();
+            x.setFullYear(2002,0,15);
+            var today = new Date();
+
+            let age=(today-x)/365;
+            let content="Gloria is "+age+" years old. Congratulation!";
+            document.getElementById("plan").innerHTML = content;
+            console.log("displaywork");
+            }
+
+        
+
+            
+
+        
+          
+          
+       </script>\
+       
+
+    </body>
+    <footer>
+
+    </footer>
+    </html>
+    
+
+    
