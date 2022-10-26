@@ -35,7 +35,7 @@
         <h3 id="plan"></h3>
         
         <img onclick="displayDate()"  src="images/260x260.png" alt="orange" height=80 width= 80 />
-        <img onclink="displayPlan()"   src="images/1.png" alt="orange" id="orange"/></a>
+        <img onclick="displayPlan()"   src="images/1.png" alt="orange" id="orange"/></a>
     
         <script type="text/javascript">
             function displayDate(){
@@ -91,10 +91,15 @@
         function displayPlan(){
             var x=new Date();
             x.setFullYear(2002,0,15);
+          
             var today = new Date();
 
             let age=(today-x)/365;
             let content="Gloria is "+age+" years old. Congratulation!";
+            let age=parseInt(((today-x)/86400000)/365);
+            let fage=Math.ceil(((today-x)/86400000)/365);
+           
+            let content="Gloria is "+age+" years old. She will be "+fage+" years old soon. Congratulation!";
             document.getElementById("plan").innerHTML = content;
             console.log("displaywork");
             }

@@ -33,6 +33,15 @@ h2{
     display: flex;
     font-size: 50px; 
 }
+h3{
+  font-family: AMB;
+    
+    display: block;
+    margin: auto;
+
+    display: flex;
+    font-size: 30px; 
+}
 
 .clock {
    
