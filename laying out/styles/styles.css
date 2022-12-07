@@ -59,7 +59,11 @@ nav {
     justify-content: flex-end;
     padding: 20px;
 }
-
+.Content{
+  display:grid;
+  grid-template-columns: 3fr 1fr;
+  margin:16px;
+}
 #home {
     flex: auto;
     padding: 20px;
@@ -83,6 +87,7 @@ nav {
 }
 .Footer{
     background-color: #8f91a2;
+    margin: 10px;
 }
 .content-wrap {
     max-width: 800px;
